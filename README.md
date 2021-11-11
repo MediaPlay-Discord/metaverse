@@ -1,4 +1,4 @@
-# metaverse
+# metaverse [![Godot Export CI](https://github.com/MediaPlay-Discord/metaverse/actions/workflows/main.yml/badge.svg)](https://github.com/MediaPlay-Discord/metaverse/actions/workflows/main.yml)
 The MediaPlay Metaverse
 
 ---
