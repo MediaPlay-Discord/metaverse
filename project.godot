@@ -11,8 +11,23 @@ config_version=4
 [application]
 
 config/name="MediaPlay Metaverse"
+config/description="The MediaPlay Metaverse, it's where all MediaPlay members can hang out in a decentralized way!"
 run/main_scene="res://Lobby.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://Assets/Icons/icon.png"
+
+[debug]
+
+settings/crash_handler/message="It looks like the client crashed. Consider reporting them at https://github.com/MediaPlay-Discord/metaverse/issues"
+
+[display]
+
+window/size/fullscreen=true
+window/dpi/allow_hidpi=true
+
+[gui]
+
+theme/use_hidpi=true
 
 [input]
 
@@ -46,6 +61,10 @@ jump={
  ]
 }
 
+[logging]
+
+file_logging/log_path="user://logs/client.log"
+
 [physics]
 
 common/enable_pause_aware_picking=true
@@ -57,5 +76,4 @@ vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_clear_color=Color( 0.435294, 0.733333, 0.843137, 1 )
 quality/filters/use_fxaa=true
-quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"

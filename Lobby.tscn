@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Objects/Linerly.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Montserrat-Bold.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Scripts/Matrix.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -44,11 +43,6 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0
 use_collision = true
 mesh = ExtResource( 1 )
 
-[node name="ClippedCamera" type="ClippedCamera" parent="."]
-transform = Transform( 0.683013, -0.258819, 0.683013, -0.00623602, 0.933013, 0.359789, -0.73038, -0.25, 0.635646, 3.10455, 2.21672, 2.92554 )
-current = true
-fov = 30.0
-
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -57,16 +51,20 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control"]
-margin_left = 50.0
-margin_top = 50.0
-margin_right = 762.0
-margin_bottom = 129.0
-rect_pivot_offset = Vector2( -50, -50 )
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -355.0
 theme = SubResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "MediaPlay Metaverse"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
-script = ExtResource( 4 )
+[node name="ClippedCamera" type="ClippedCamera" parent="."]
+transform = Transform( 0.683013, -0.258819, 0.683013, -0.00623602, 0.933013, 0.359789, -0.73038, -0.25, 0.635646, 3.17663, 2.21672, 2.92554 )
+current = true
+fov = 30.0
