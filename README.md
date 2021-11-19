@@ -1,11 +1,9 @@
-# metaverse
+# metaverse [![Godot Export CI](https://github.com/MediaPlay-Discord/metaverse/actions/workflows/main.yml/badge.svg)](https://github.com/MediaPlay-Discord/metaverse/actions/workflows/main.yml)
 The MediaPlay Metaverse
 
 ---
 
-<!--Coming soon, this will be private for now until I finish writing the whole thing about this project in the readme.-->
-
-The MediaPlay metaverse will be powered by... (you guessed it maybe) [the Matrix protocol!](https://matrix.org/)
+The plan is to use the Matrix protocol as well, but right now it's still nothing.
 
 # Why Matrix?
 Metaverses definitely need to be open-source, decentralized, federated, and interoperatable with other metaverses as well, so that's why it will use Matrix for most of the federation, interoperability, you know, the stuff that make metaverses work.
