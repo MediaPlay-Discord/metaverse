@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Objects/Linerly.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Montserrat-Bold.tres" type="DynamicFont" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="BoxShape" id=3]
+
+[sub_resource type="Theme" id=4]
 
 [node name="Lobby" type="Spatial"]
 
@@ -44,3 +47,22 @@ mesh = ExtResource( 1 )
 transform = Transform( 0.683013, -0.258819, 0.683013, -0.00623602, 0.933013, 0.359789, -0.73038, -0.25, 0.635646, 3.10455, 2.21672, 2.92554 )
 current = true
 fov = 30.0
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 762.0
+margin_bottom = 129.0
+rect_pivot_offset = Vector2( -50, -50 )
+theme = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "MediaPlay Metaverse"
+align = 1
+valign = 1
