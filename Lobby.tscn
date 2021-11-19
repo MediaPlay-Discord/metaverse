@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Objects/Linerly.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Montserrat-Bold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/Matrix.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -66,3 +67,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "MediaPlay Metaverse"
 align = 1
 valign = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource( 4 )
