@@ -19,6 +19,10 @@ jobs:
       # Get the entire project history.
       with:
         fetch-depth: 0
+        
+    - name: Setup Android SDK Tools
+      uses: android-actions/setup-android@v2.0.2
+      
     - name: Export game
       # Use the latest version.
       uses: firebelley/godot-export@v3.0.0
