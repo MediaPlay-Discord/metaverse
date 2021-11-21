@@ -1,10 +1,10 @@
 name: "Godot Export CI"
 
-# Whenever a push is made to the master branch, run the job.
+# Whenever there's a new version tag, run the job.
 on: 
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   export_game:
@@ -19,7 +19,7 @@ jobs:
       # Get the entire project history.
       with:
         fetch-depth: 0
-    - name: Export Game
+    - name: Export game
       # Use the latest version.
       uses: firebelley/godot-export@v3.0.0
       with:
