@@ -11,9 +11,9 @@ config_version=4
 [application]
 
 config/name="MediaPlay Metaverse"
-config/description="The MediaPlay Metaverse, it's where all MediaPlay members can hang out in a decentralized way!"
-run/main_scene="res://Lobby.tscn"
-boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/description="The MediaPlay Metaverse, it's where all MediaPlay members can hang out in a decentralized way."
+run/main_scene="res://MainMenu.tscn"
+boot_splash/bg_color=Color( 0, 0.0733333, 0.1, 1 )
 config/icon="res://Assets/Icons/icon.png"
 
 [debug]
@@ -71,9 +71,9 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
 environment/default_clear_color=Color( 0.435294, 0.733333, 0.843137, 1 )
 quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"

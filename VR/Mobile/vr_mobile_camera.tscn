@@ -1,0 +1,70 @@
+[gd_scene format=2]
+
+[node name="vr_mobile_camera" type="Spatial"]
+
+[node name="Viewport_left" type="Viewport" parent="."]
+
+[node name="Camera_left" type="Camera" parent="Viewport_left"]
+current = true
+fov = 100.0
+near = 0.1
+far = 1000.0
+
+[node name="progress_left" type="TextureProgress" parent="Viewport_left"]
+
+[node name="Viewport_right" type="Viewport" parent="."]
+
+[node name="Camera_right" type="Camera" parent="Viewport_right"]
+current = true
+fov = 100.0
+near = 0.1
+far = 1000.0
+
+[node name="progress_right" type="TextureProgress" parent="Viewport_right"]
+
+[node name="ViewportSprite_left" type="Node" parent="."]
+
+[node name="ViewportSprite_right" type="Node" parent="."]
+
+[node name="magneto" type="Spatial" parent="."]
+
+[node name="compass" type="Spatial" parent="."]
+
+[node name="center" type="Spatial" parent="compass"]
+
+[node name="target" type="Spatial" parent="compass/center"]
+
+[node name="origin" type="Spatial" parent="."]
+
+[node name="yaw" type="Spatial" parent="origin"]
+
+[node name="convergence" type="Spatial" parent="origin/yaw"]
+
+[node name="pitch" type="Spatial" parent="origin/yaw"]
+
+[node name="roll" type="Spatial" parent="origin/yaw/pitch"]
+
+[node name="fake_camera_left" type="Spatial" parent="origin/yaw/pitch/roll"]
+
+[node name="fake_camera_right" type="Spatial" parent="origin/yaw/pitch/roll"]
+
+[node name="RayCast" type="RayCast" parent="origin/yaw/pitch/roll"]
+enabled = true
+cast_to = Vector3( 0, 0, -1000 )
+
+[node name="accelerometer" type="Label" parent="."]
+
+[node name="magnometer" type="Label" parent="."]
+
+[node name="gyroscope" type="Label" parent="."]
+
+[node name="label_yaw" type="Label" parent="."]
+
+[node name="label_pitch" type="Label" parent="."]
+
+[node name="label_roll" type="Label" parent="."]
+
+[node name="debug" type="Label" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
