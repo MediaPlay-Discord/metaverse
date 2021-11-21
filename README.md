@@ -16,7 +16,12 @@ It's nice if we have some resources to set up our own Matrix homeserver, but for
 # Why use Godot for the client?
 Some people used Godot as well to make simple games with the Matrix protocol, so why not?
 
-# What platforms will it support? Windows, macOS, GNU/Linux, Android, iOS, HTML5?
-Godot supports those platforms, but I will be exporting it for Windows, GNU/Linux, Android, and HTML5 for now. Feel free to clone the repository and export it yourself for the platform you want.
+# What platforms will it support?
+Mostly the desktop (Windows, macOS, GNU/Linux), but soon mobile (Android) as well.
+
+# VR?
+Soon enough, though it'll be available on mobile. (if you have a VR headset for phones like Google Cardboard, VR BOX, ...)
+
+---
 
 Web 3.0 will definitely come soon. Not sure if the metaverse is (really) the future of the internet or is just a hype.
