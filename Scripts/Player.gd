@@ -1,3 +1,4 @@
+# This isn't used for now.
 extends KinematicBody
 
 # How fast the player moves in meters per second.
