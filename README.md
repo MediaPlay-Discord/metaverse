@@ -22,6 +22,9 @@ Mostly the desktop (Windows, macOS, GNU/Linux), but soon mobile (Android) as wel
 # VR?
 Soon enough, though it'll be available on mobile. (if you have a VR headset for phones like Google Cardboard, VR BOX, ...)
 
+# My Matrix account is on matrix.org, why can't I log in?
+For some reason, matrix.org gives back numbers instead of JSON. You can try using another Matrix homeserver for now, there will be an option to use a token soon (if you're using Element, you can find it in Settings -> Help & About -> Advanced -> Access Token).
+
 ---
 
 Web 3.0 will definitely come soon. Not sure if the metaverse is (really) the future of the internet or is just a hype.
