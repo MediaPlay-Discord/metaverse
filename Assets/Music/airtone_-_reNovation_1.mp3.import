@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/airtone_-_reNovation_1.mp3-043bac15647bbfbf389d21db69ab5a21.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/airtone_-_reNovation_1.mp3"
+dest_files=[ "res://.import/airtone_-_reNovation_1.mp3-043bac15647bbfbf389d21db69ab5a21.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

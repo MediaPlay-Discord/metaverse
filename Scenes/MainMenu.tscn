@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Matrix/MatrixSignIn.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Montserrat-Regular.tres" type="DynamicFont" id=2]
@@ -6,6 +6,20 @@
 [ext_resource path="res://Fonts/Montserrat-Medium.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Fonts/Montserrat-Italic.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Assets/Music/MainMenu.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/Profile.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Username.gd" type="Script" id=8]
+
+[sub_resource type="Theme" id=6]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.286275, 0.431373, 0.486275, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color( 0, 0, 0, 0.152941 )
+shadow_size = 15
+shadow_offset = Vector2( 0, 5 )
 
 [sub_resource type="Theme" id=4]
 
@@ -28,86 +42,28 @@ shadow_enabled = true
 transform = Transform( 0.965926, 0.109382, -0.23457, 0, 0.906308, 0.422618, 0.258819, -0.408218, 0.875426, 0, 4.365, 0 )
 current = true
 
-[node name="UI" type="Control" parent="."]
+[node name="LobbyUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 2.0
-margin_bottom = 2.0
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="UI"]
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -355.0
-theme = SubResource( 4 )
-custom_fonts/font = ExtResource( 3 )
-text = "MediaPlay Metaverse"
-align = 1
+[node name="Username" type="Label" parent="LobbyUI"]
+margin_left = 50.0
+margin_top = 15.0
+margin_right = 134.0
+margin_bottom = 36.0
+theme = SubResource( 6 )
+custom_fonts/font = ExtResource( 2 )
+text = "Username"
 valign = 1
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HomeserverUrlInput" type="LineEdit" parent="UI"]
-anchor_left = 0.35
-anchor_top = 0.5
-anchor_right = 0.65
-anchor_bottom = 0.5
-hint_tooltip = "The homeserver URL, like https://matrix-client.matrix.org for example."
-custom_fonts/font = ExtResource( 2 )
-placeholder_text = "Homeserver URL"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="UsernameInput" type="LineEdit" parent="UI"]
-anchor_left = 0.35
-anchor_top = 0.5
-anchor_right = 0.65
-anchor_bottom = 0.5
-margin_top = 55.0
-margin_bottom = 100.0
-hint_tooltip = "The username of the account on the homeserver."
-custom_fonts/font = ExtResource( 2 )
-placeholder_text = "Username"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PasswordInput" type="LineEdit" parent="UI"]
-anchor_left = 0.35
-anchor_top = 0.5
-anchor_right = 0.65
-anchor_bottom = 0.5
-margin_top = 110.0
-margin_bottom = 155.0
-hint_tooltip = "The password for the account."
-custom_fonts/font = ExtResource( 2 )
-secret = true
-placeholder_text = "Password"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SignInButton" type="Button" parent="UI"]
-anchor_left = 0.5
-anchor_top = 0.8
-anchor_right = 0.5
-anchor_bottom = 0.8
-margin_left = -56.0
-margin_right = 58.0
-margin_bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
-text = "SIGN IN"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Notice" type="Label" parent="UI"]
+[node name="Notice" type="Label" parent="LobbyUI"]
 anchor_left = 0.5
 anchor_top = 0.9
 anchor_right = 0.5
@@ -123,7 +79,152 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HTTPRequest" type="HTTPRequest" parent="UI"]
+[node name="Panel" type="Panel" parent="LobbyUI"]
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = -177.098
+margin_top = -128.0
+margin_right = 172.902
+margin_bottom = 128.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="LobbyUI"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 45.0
+expand = true
+stretch_mode = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginUI" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_bottom = 2.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="LoginUI"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -355.0
+theme = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "MediaPlay Metaverse"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notice" type="Label" parent="LoginUI"]
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.95
+margin_left = -302.0
+margin_right = 40.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 5 )
+text = "Don't have a Matrix account yet? Register one using another Matrix client."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="LoginUI"]
+
+[node name="Panel" type="Panel" parent="LoginUI"]
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = -177.098
+margin_top = -128.0
+margin_right = 172.902
+margin_bottom = 128.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomeserverUrlInput" type="LineEdit" parent="LoginUI/Panel"]
+anchor_left = 0.5
+anchor_top = 0.182
+anchor_right = 0.5
+anchor_bottom = 0.182
+margin_left = -150.0
+margin_top = -23.296
+margin_right = 150.0
+margin_bottom = 18.704
+hint_tooltip = "The homeserver URL, like https://matrix-client.matrix.org for example."
+custom_fonts/font = ExtResource( 2 )
+placeholder_text = "Homeserver URL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameInput" type="LineEdit" parent="LoginUI/Panel"]
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.4
+margin_left = -150.0
+margin_top = -23.296
+margin_right = 150.0
+margin_bottom = 18.704
+hint_tooltip = "The username of the account on the homeserver."
+custom_fonts/font = ExtResource( 2 )
+placeholder_text = "Username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordInput" type="LineEdit" parent="LoginUI/Panel"]
+anchor_left = 0.5
+anchor_top = 0.618
+anchor_right = 0.5
+anchor_bottom = 0.618
+margin_left = -150.0
+margin_top = -23.296
+margin_right = 150.0
+margin_bottom = 18.704
+hint_tooltip = "The password for the account."
+custom_fonts/font = ExtResource( 2 )
+secret = true
+placeholder_text = "Password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SignInButton" type="Button" parent="LoginUI/Panel"]
+anchor_left = 0.5
+anchor_top = 0.836
+anchor_right = 0.5
+anchor_bottom = 0.836
+margin_left = -55.5189
+margin_top = -18.7291
+margin_right = 58.481
+margin_bottom = 18.2709
+custom_fonts/font = ExtResource( 4 )
+text = "SIGN IN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
@@ -341,4 +442,4 @@ disabled = true
 use_collision = true
 mesh = SubResource( 2 )
 
-[connection signal="pressed" from="UI/SignInButton" to="UI" method="_on_SignInButton_pressed"]
+[connection signal="pressed" from="LoginUI/Panel/SignInButton" to="LoginUI" method="_on_SignInButton_pressed"]
