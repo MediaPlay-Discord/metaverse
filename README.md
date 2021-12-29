@@ -4,6 +4,7 @@ The MediaPlay Metaverse
 ---
 
 The plan is to use the Matrix protocol as well, but right now it's still nothing.
+The version of Godot that this project uses might be a bit outdated, so right now it's impossible to request any web requests for now.
 
 # Why [Matrix](https://matrix.org)?
 Metaverses definitely need to be open-source, decentralized, federated, and interoperatable with other metaverses as well, so that's why it will use Matrix for most of the federation, interoperability, you know, the stuff that make metaverses work.
